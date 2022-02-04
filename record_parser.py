@@ -39,9 +39,6 @@ with open('/Users/paulpaik/Desktop/Projects/BrowseTracker/data_set/Takeout/Youtu
                     channel_name = data_block[:data_block.find('<')]
                     # There were some cases where the video_url name and video_title were the same with no channel name. This is the case where the video is no longer available.
                     if video_url != video_title and channel_name != "":
-                        data_dict['video_url'].append(video_url)
-                        data_dict['video_title'].append(video_title)
-                        data_dict['channel_name'].append(channel_name)
                         # Parse out time information when video was viewed. 
                         data_block = data_block.replace(f'{channel_name}</a><br>', '')
                         raw_accessed_time = data_block[:data_block.find('<')]
@@ -50,4 +47,12 @@ with open('/Users/paulpaik/Desktop/Projects/BrowseTracker/data_set/Takeout/Youtu
                             tmp_time[3] = "AM"
                         else:
                             tmp_time[3] = "PM"
-                        
+                        # Massage time information and update dictionary only if meeting criteria.
+                        if len(tmp_time) == 6:
+                            data_dict['video_url'].append(video_url)
+                            data_dict['video_title'].append(video_title)
+                            data_dict['channel_name'].append(channel_name)
+                            accessed_time = f"{tmp_time[1].replace('.', '-')}{tmp_time[2].replace('.', '-')}{tmp_time[0].strip('.')} {tmp_time[4]} {tmp_time[3]}"
+                            data_dict['accessed_time'].append(accessed_time)
+
+yt_records_df = pd.DataFrame(data_dict)
