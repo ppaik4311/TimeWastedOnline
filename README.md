@@ -1,6 +1,7 @@
 # BrowseTracker
 
 A personal project that just came into mind while browsing on my phone in the bathroom.
+This program will parse out information based on my Youtube views and Google search results.
 
 # Purpose
 

@@ -1,0 +1,214 @@
+{
+    "Apps": [
+        {
+            "app_launch_ordinal": "t",
+            "extension": {
+                        "incognito_enabled": true,
+                        "remote_install": false,
+                        "disable_reasons": 0,
+                        "update_url": "",
+                        "id": "ahfgeienlihckogmohjhadlkjgocpleb",
+                        "version": "0.2",
+                        "enabled": true
+            },
+            "page_ordinal": "n"
+}
+    ],
+    "App Settings": [],
+    "Preferences": [
+        {
+            "name": "profile.content_settings.exceptions.images",
+            "value": "{}"
+},
+        {
+            "name": "intl.accept_languages",
+            "value": "\"en-US,en,ko\""
+},
+        {
+            "name": "profile.content_settings.exceptions.flash_data",
+            "value": "{}"
+},
+        {
+            "name": "translate_allowlists",
+            "value": "{\"zh-CN\":\"en\"}"
+},
+        {
+            "name": "custom_links.initialized",
+            "value": "true"
+},
+        {
+            "name": "translate_whitelists",
+            "value": "{\"zh-CN\":\"en\"}"
+},
+        {
+            "name": "autofill.profile_enabled",
+            "value": "true"
+},
+        {
+            "name": "translate_too_often_denied_for_language",
+            "value": "{\"ko\":true}"
+},
+        {
+            "name": "translate_force_trigger_on_english_count_for_backoff_1",
+            "value": "-1"
+},
+        {
+            "name": "profile.default_content_setting_values.plugins",
+            "value": "5"
+},
+        {
+            "name": "profile.content_settings.exceptions.popups",
+            "value": "{\"http://flyasiana.com:80,*\":{\"last_modified\":\"13170489667044997\",\"setting\":1},\"http://www.hanatour.com:80,*\":{\"last_modified\":\"13170489124241568\",\"setting\":1},\"https://cafe.naver.com:443,*\":{\"expiration\":\"0\",\"last_modified\":\"13242355009183748\",\"model\":0,\"setting\":1},\"https://escrow.gmarket.co.kr:443,*\":{\"last_modified\":\"13173274697965682\",\"setting\":1},\"https://pension.kyobo.co.kr:443,*\":{\"last_modified\":\"13172828862515889\",\"setting\":1}}"
+},
+        {
+            "name": "translate_site_blacklist",
+            "value": "[]"
+},
+        {
+            "name": "bookmark_bar.show_reading_list",
+            "value": "false"
+},
+        {
+            "name": "autofill.last_version_deduped",
+            "value": "55"
+},
+        {
+            "name": "profile.content_settings.exceptions.font_access",
+            "value": "{}"
+},
+        {
+            "name": "translate_ignored_count_for_language",
+            "value": "{\"de\":8,\"en\":6,\"es\":6,\"fr\":5,\"it\":1,\"ja\":13,\"kn\":2,\"ko\":34,\"mt\":1,\"pl\":0,\"pt\":5,\"ru\":2,\"so\":1,\"zh-CN\":0,\"zh-TW\":2}"
+},
+        {
+            "name": "profile.name",
+            "value": "\"사용자 이름 1\""
+},
+        {
+            "name": "custom_links.list",
+            "value": "[]"
+},
+        {
+            "name": "profile.content_settings.exceptions.cookies",
+            "value": "{}"
+},
+        {
+            "name": "ntp.app_page_names",
+            "value": "[\"앱\"]"
+},
+        {
+            "name": "browser.show_fullscreen_toolbar",
+            "value": "false"
+},
+        {
+            "name": "profile.avatar_index",
+            "value": "26"
+},
+        {
+            "name": "translate_blocked_languages",
+            "value": "[\"ko\"]"
+},
+        {
+            "name": "translate_recent_target",
+            "value": "\"en\""
+},
+        {
+            "name": "autofill.profile_use_dates_fixed",
+            "value": "true"
+},
+        {
+            "name": "profile.content_settings.exceptions.plugins",
+            "value": "{}"
+},
+        {
+            "name": "browser.clear_data.time_period_basic",
+            "value": "4"
+},
+        {
+            "name": "translate_site_blacklist_with_time",
+            "value": "{}"
+},
+        {
+            "name": "sync.demographics_birth_year_offset",
+            "value": "0"
+},
+        {
+            "name": "extensions.pinned_extensions",
+            "value": "[\"kbfnbcaeplbcioakkpcpgfkobkghlhen\"]"
+},
+        {
+            "name": "default_search_provider.synced_guid",
+            "value": "\"720CD2FB-9561-4D60-A4CB-290007926075\""
+},
+        {
+            "name": "translate_accepted_count",
+            "value": "{\"en\":0,\"es\":0,\"fr\":2,\"ja\":0,\"kn\":0,\"ko\":0,\"mt\":0,\"nl\":0,\"pl\":1,\"ru\":0,\"su\":0,\"zh-CN\":1}"
+},
+        {
+            "name": "intl.selected_languages",
+            "value": "\"en-US,en,ko\""
+},
+        {
+            "name": "alternate_error_pages.enabled",
+            "value": "true"
+},
+        {
+            "name": "profile.content_settings.exceptions.javascript",
+            "value": "{}"
+},
+        {
+            "name": "sharing.vapid_key",
+            "value": "{\"vapid_creation_timestamp\":\"13213850377970781\",\"vapid_private_key\":\"MIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQggaAUy1wlpKPbOx5cmOGdZuJlqjNoerqtQNvkIGzZqCehRANCAARhYp94wogd0rgFuOf3cKnuBpbgLhe40r4wGUINTXYxJ0rN+EatLejNsJ7E8ez0rD3GhlIimrrBOYSavWUJ7pZv\"}"
+},
+        {
+            "name": "bookmark_bar.show_on_all_tabs",
+            "value": "true"
+},
+        {
+            "name": "extensions.commands",
+            "value": "{}"
+},
+        {
+            "name": "extensions.toolbar",
+            "value": "[\"efaidnbmnnnibpcajpcglclefindmkaj\",\"kbfnbcaeplbcioakkpcpgfkobkghlhen\",\"goobgennebinldhonaajgafidboenlkl\",\"ejbdobdndcjhdmljipngpeoekdinlohe\",\"nmgcfemagnogdodbambjhdcmfcpicngl\"]"
+},
+        {
+            "name": "profile.content_settings.exceptions.midi_sysex",
+            "value": "{}"
+},
+        {
+            "name": "bookmark_bar.show_apps_shortcut",
+            "value": "false"
+},
+        {
+            "name": "profile.content_settings.exceptions.storage_access",
+            "value": "{}"
+},
+        {
+            "name": "translate_denied_count_for_language",
+            "value": "{\"en\":2,\"es\":3,\"fr\":0,\"ja\":1,\"kn\":1,\"ko\":1,\"mt\":1,\"nl\":1,\"pl\":0,\"ru\":1,\"su\":1,\"zh-CN\":0}"
+},
+        {
+            "name": "profile.content_settings.exceptions.window_placement",
+            "value": "{}"
+},
+        {
+            "name": "profile.content_settings.exceptions.automatic_downloads",
+            "value": "{\"https://mail.google.com:443,*\":{\"last_modified\":\"13223480949177511\",\"setting\":1},\"https://pdfplug.com:443,*\":{\"last_modified\":\"13222649381043467\",\"setting\":1},\"https://uth.instructure.com:443,*\":{\"expiration\":\"0\",\"last_modified\":\"13250650840214860\",\"model\":0,\"setting\":1},\"https://word-edit.officeapps.live.com:443,*\":{\"expiration\":\"0\",\"last_modified\":\"13254200746546238\",\"model\":0,\"setting\":1}}"
+},
+        {
+            "name": "sharing.synced_devices",
+            "value": "{\"4jI0wpiC5SYRrwnCZgLupw==\":{\"device_auth_secret\":\"N6MOVCExojAne5ikCWKqZg==\",\"device_capabilities\":0,\"device_fcm_token\":\"fb_ldPWW66I:APA91bEgzAqA5u2ScKzrfedgTfp-T8K4On-9RI7NYvZB9IZFM_rzRnvY1nB9_XqHwwCI2dvYsty_R3rKMaWTmVwQgPsDNhSqZ_FISljz6xKuvGddDI7GWjq817s_f_NdSRkk0eLkvCz3\",\"device_last_updated\":\"13216701771307377\",\"device_p256dh\":\"BN4d4R1GDKf55PqskKMFGMX4ri7M+2WikOE87D/DClKZN7HOf5o/VnUxpUo7Nd6Kwr6yteJN/g0B9m2esQ/A8zo=\"},\"GxZ0elEkIySfQ0EQ+8MJ8w==\":{\"device_auth_secret\":\"OFGsT0+k678alWLpTFlL8g==\",\"device_capabilities\":2,\"device_fcm_token\":\"eZzY9Yxa5xk:APA91bEchv4dq5xZmeyACXzjLJYBLXoW5WC4aPFdtGhHNv4zvC2hnFdN6hv3XV_COhFK-3t2YjWVbt_bGsOD4f8q1vtZ4Tusoy8ubgIibWi5Of1hhsI_-_dh9qI-xJPfUFsCpXCjFkq6\",\"device_p256dh\":\"BM0ycDMJzsC4ybxdD7zfqBPyKY4Mjc8fyX5tA3Mhc4rM6pfME16ciPAAVVrb2SNMm+odENJTdUK1PrWTdoY0NtU=\"},\"eQxdWiklxbkn7Z/LpY/MTw==\":{\"device_auth_secret\":\"HA/Pu/wefx2MZwaIUkAF6w==\",\"device_capabilities\":2,\"device_fcm_token\":\"ev5e-i8NLpg:APA91bHOKdMdYyxXp5sBZRHFQ1Ue76ImfRui-j-pTl5Aheot2dT461HBNjIClB3JehOqKyjWWfjklsl-RhgIhkkZzMNBIbtLHEDxz7oqG5FpNPbvx2_msbzpPUz7fF-TyV2BxadU6eb_\",\"device_p256dh\":\"BDYfsbjCnbq8gQl52LH8h5Jhyi9qZqOy86qCvAL9KiIyOWeeLbr7kJhztFxwaiasQmazrdrmY+P/fTyeYUsJwSk=\"},\"oFUQaVcgCqv1wtXDuRvgUQ==\":{\"device_auth_secret\":\"9Eo68h8hdWw4AQ5K73GCXg==\",\"device_capabilities\":2,\"device_fcm_token\":\"fV8a6Nst5Ro:APA91bGmYcWgWEJJbK96PxXaLoj-BmBkMvK9WltAIQQGZioA_MdLJPup6Ln18zSvL-KEmgC-ZVW8Bfzk0GtGOkD0JfG9hP6PA2jMm5_5tA8CRZHy9rdR815XXkVcl56nfiL7RG3ASPHh\",\"device_p256dh\":\"BPXSC1gkSSTRubqhMewFzV1iB4KRxdfLAtjJf9sPv0LkUsxPzm3Sx/6t9d6joNsi6PrUocZooURAbTAzFneQuPY=\"}}"
+},
+        {
+            "name": "autofill.last_version_disused_addresses_deleted",
+            "value": "70"
+}
+    ],
+    "Themes": [
+        {
+            "use_system_theme_by_default": false,
+            "use_custom_theme": false
+}
+    ]
+}
