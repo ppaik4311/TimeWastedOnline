@@ -64,3 +64,4 @@ yt_records_df = yt_records_df[yt_records_df['accessed_time'] >= 2]
 yt_records_df = yt_records_df.rename(columns={'video_url':'#_of_unique_urls', 'video_title':'#_of_unique_video_titles', 'accessed_time':'#_of_accessed_time'})
 fig = px.bar(yt_records_df, x='channel_name', y='#_of_accessed_time')
 fig.show()
+#Testing
