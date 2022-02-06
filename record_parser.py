@@ -6,6 +6,7 @@
 
 import re
 import pandas as pd
+import plotly.graph_objects as go
 from datetime import datetime
 
 START_OF_BLOCK = '<div class="mdl-grid"><div class="header-cell mdl-cell mdl-cell--12-col"><p class="mdl-typography--title">YouTube<br></p></div><div class="content-cell mdl-cell mdl-cell--6-col mdl-typography--body-1">'
@@ -13,9 +14,9 @@ END_OF_BLOCK = '<div class=\"content-cell mdl-cell mdl-cell--6-col mdl-typograph
 DELETED_VIDEO_INFORMATION = 'https://myaccount.google.com/activitycontrols'
 KOREAN_AM = '오전'
 
-data_dict = {'video_url':[], 
-             'video_title':[], 
-             'channel_name':[], 
+data_dict = {'video_url':[],
+             'video_title':[],
+             'channel_name':[],
              'accessed_time':[]}
 
 # Read raw data, parse data, and convert to Pandas DataFrame.
@@ -38,7 +39,7 @@ with open('/Users/paulpaik/Desktop/Projects/BrowseTracker/data_set/Takeout/Youtu
                     channel_name = data_block[:data_block.find('<')]
                     # There were some cases where the video_url name and video_title were the same with no channel name. This is the case where the video is no longer available.
                     if video_url != video_title and channel_name != "":
-                        # Parse out time information when video was viewed. 
+                        # Parse out time information when video was viewed.
                         data_block = data_block.replace(f'{channel_name}</a><br>', '')
                         raw_accessed_time = data_block[:data_block.find('<')]
                         tmp_time = raw_accessed_time.split(" ")
@@ -54,19 +55,11 @@ with open('/Users/paulpaik/Desktop/Projects/BrowseTracker/data_set/Takeout/Youtu
                             accessed_time = f"{tmp_time[1].replace('.', '-')}{tmp_time[2].replace('.', '-')}{tmp_time[0].strip('.')} {tmp_time[4]} {tmp_time[3]}"
                             data_dict['accessed_time'].append(accessed_time)
 
+# Organize record data frame for youtube view records.
+# I have only filtered out results based number of access time. If I saw a channel more than twice,
+# I consider it to be intentional.
 yt_records_df = pd.DataFrame(data_dict)
-
-unique_channels = yt_records_df['channel_name'].unique()
-channel_counts = {'channel_name':[],
-                  'count':[]}
-channel_counts['channel_name'] = unique_channels
-# Definitely there should be a better way to do this...
-for item in unique_channels:
-    tmp_count = 0
-    for row_data in yt_records_df['channel_name']:
-        if item == row_data:
-            tmp_count += 1
-    channel_counts['count'].append(tmp_count)
-
-view_pareto = pd.DataFrame(channel_counts)
-view_pareto = view_pareto.sort_values(by='count', ascending=False)
+yt_records_df = yt_records_df.groupby('channel_name').nunique()
+yt_records_df = yt_records_df.sort_values(by='accessed_time', ascending=False)
+yt_records_df = yt_records_df[yt_records_df['accessed_time'] >= 2]
+yt_records_df.to_csv('test.csv')
