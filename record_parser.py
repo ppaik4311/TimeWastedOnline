@@ -13,7 +13,6 @@ END_OF_BLOCK = '<div class=\"content-cell mdl-cell mdl-cell--6-col mdl-typograph
 DELETED_VIDEO_INFORMATION = 'https://myaccount.google.com/activitycontrols'
 KOREAN_AM = '오전'
 
-
 data_dict = {'video_url':[], 
              'video_title':[], 
              'channel_name':[], 
@@ -56,3 +55,18 @@ with open('/Users/paulpaik/Desktop/Projects/BrowseTracker/data_set/Takeout/Youtu
                             data_dict['accessed_time'].append(accessed_time)
 
 yt_records_df = pd.DataFrame(data_dict)
+
+unique_channels = yt_records_df['channel_name'].unique()
+channel_counts = {'channel_name':[],
+                  'count':[]}
+channel_counts['channel_name'] = unique_channels
+# Definitely there should be a better way to do this...
+for item in unique_channels:
+    tmp_count = 0
+    for row_data in yt_records_df['channel_name']:
+        if item == row_data:
+            tmp_count += 1
+    channel_counts['count'].append(tmp_count)
+
+view_pareto = pd.DataFrame(channel_counts)
+view_pareto = view_pareto.sort_values(by='count', ascending=False)
