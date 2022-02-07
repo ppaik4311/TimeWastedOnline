@@ -1,10 +1,11 @@
-# BrowseTracker Project
+# TimeWastedOnline Project
 # Paul Yunsuk Paik
 # ppaik4311@gmail.com
 # 02/02/2022
 # This script will parse records.
 
 import re
+import os
 import pandas as pd
 import plotly.express as px
 
@@ -19,7 +20,7 @@ data_dict = {'video_url':[],
              'accessed_time':[]}
 
 # Read raw data, parse data, and convert to Pandas DataFrame.
-with open('/Users/paulpaik/Desktop/Projects/BrowseTracker/data_set/Takeout/Youtube/History/view_history.html') as file:
+with open(f'{os.getcwd()}/data_set/Takeout/Youtube/History/view_history.html') as file:
     for line in file:
         break_down_list = line.split(START_OF_BLOCK)
         # Breakdown information block and parse data.
@@ -62,6 +63,3 @@ yt_records_df = yt_records_df.groupby(by='channel_name', as_index=False).nunique
 yt_records_df = yt_records_df.sort_values(by='accessed_time', ascending=False)
 yt_records_df = yt_records_df[yt_records_df['accessed_time'] >= 2]
 yt_records_df = yt_records_df.rename(columns={'video_url':'#_of_unique_urls', 'video_title':'#_of_unique_video_titles', 'accessed_time':'#_of_accessed_time'})
-fig = px.bar(yt_records_df, x='channel_name', y='#_of_accessed_time')
-fig.show()
-#Testing
