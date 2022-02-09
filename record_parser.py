@@ -7,7 +7,6 @@
 import re
 import os
 import pandas as pd
-import plotly.express as px
 
 START_OF_BLOCK = '<div class="mdl-grid"><div class="header-cell mdl-cell mdl-cell--12-col"><p class="mdl-typography--title">YouTube<br></p></div><div class="content-cell mdl-cell mdl-cell--6-col mdl-typography--body-1">'
 END_OF_BLOCK = '<div class=\"content-cell mdl-cell mdl-cell--6-col mdl-typography--body-1 mdl-typography--text-right\">'
@@ -59,9 +58,10 @@ with open(f'{os.getcwd()}/data_set/Takeout/Youtube/History/view_history.html') a
 # I have only filtered out results based number of access time. If I saw a channel more than twice,
 # I consider it to be intentional.
 yt_records_df = pd.DataFrame(data_dict)
-yt_records_df.to_csv('temporary.csv')
+#yt_records_df.to_csv('temporary.csv')
 yt_records_df = yt_records_df.groupby(by='channel_name', as_index=False).nunique()
 yt_records_df = yt_records_df.sort_values(by='accessed_time', ascending=False)
 yt_records_df = yt_records_df[yt_records_df['accessed_time'] >= 2]
 yt_records_df = yt_records_df.rename(columns={'video_url':'#_of_unique_urls', 'video_title':'#_of_unique_video_titles', 'accessed_time':'#_of_accessed_time'})
-yt_records_df.to_csv('near_final.csv')
+yt_records_df = yt_records_df.reset_index(drop=True)
+#yt_records_df.to_csv('near_final.csv')
