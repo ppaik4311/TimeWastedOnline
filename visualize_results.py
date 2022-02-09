@@ -21,7 +21,7 @@ fig = go.Figure(data=[tmp_pareto_default], layout=layout)
 
 # Render a summary table showing list of viewed channels and view counts.
 app.layout = html.Div(children=[
-    html.H1('This is just a test to see how much I waste my life online',
+    html.H1('Summary data of time spent on Youtube',
              style={'fontsize': 14, 
                     'font-family': 'arial black'}),
 
@@ -59,7 +59,7 @@ def show_selection_range(value):
     """
     Shows user an interactive information regarding selected range.
     """
-    return f"Selected range: {value}"
+    return f"MIN bound ranking: {value[0]}, MAX bound ranking: {value[1]}"
 
 # Callback for dynamic slider - graph interaction.
 @app.callback(
