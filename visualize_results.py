@@ -4,8 +4,7 @@
 # 02/06/2022
 # Code for visualizing data on a dashboard format.
 
-import dash
-from dash import Dash, dcc, html, Input, Output
+from dash import dash, Dash, dcc, html, Input, Output
 import plotly.graph_objects as go
 from record_parser import yt_records_df as yt_data
 
