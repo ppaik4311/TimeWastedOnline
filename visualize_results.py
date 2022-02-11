@@ -23,7 +23,7 @@ fig = go.Figure(data=[tmp_pareto_default],
                 layout=layout
       )
 
-# Render a summary table showing list of viewed channels and view counts.
+# Render a summary table showing li st of viewed channels and view counts.
 app.layout = html.Div(children=[
     html.H1('Main driver page',
              style={'fontsize': 14, 
