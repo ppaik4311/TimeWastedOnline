@@ -55,23 +55,25 @@ app.layout = html.Div(children=[
         id='channel_pareto',
         figure=fig
     ),
-    
+
     # Render an interactive summary table based on range selection.
     html.Div(children=[
-        html.Thead(
-            html.Tr([
-                html.Th('Channel name'),
-                html.Th('# of times viewed')
-                ]
-            )
-        ),
-        html.Tbody([
-            html.Tr(
-                [html.Td(yt_data['channel_name'][index_value]), 
-                 html.Td(yt_data['#_of_accessed_time'][index_value])])
-            for index_value in range(0, len(yt_data['channel_name']))
-            ]
-        )],
+        #html.Thead(
+        #    html.Tr([
+        #        html.Th('Channel name'),
+        #        html.Th('# of times viewed')
+        #        ]
+        #    )
+        #),
+        #html.Tbody([
+        #    html.Tr(
+        #        [html.Td(yt_data['channel_name'][index_value]), 
+        #        html.Td(yt_data['#_of_accessed_time'][index_value])])
+        #    for index_value in range(min_bound, max_bound)
+        #    ]
+        #)],
+        ],
+        id='dynamic_summary_table'
     ),
 ])
 
@@ -115,6 +117,25 @@ def graph_output(input_range):
                       )
     )
     return fig
+
+# Callback for dynamic summary table.
+@app.callback(
+    Output('dynamic_summary_table', 'children'),
+    Input('channel_ranking_slider', 'value')
+)
+def summary_table_output(input_range):
+    return html.Thead(
+        html.Tr([
+            html.Th('Channel name'),
+            html.Th('# of times viewed')
+            ]
+        )
+    ), html.Tbody([
+        html.Tr(
+            [html.Td(yt_data['channel_name'][index_value]), 
+            html.Td(yt_data['#_of_accessed_time'][index_value])])
+        for index_value in range(input_range[0], input_range[1])
+        ])
 
 if __name__ == '__main__':
     app.run_server(debug=True)
