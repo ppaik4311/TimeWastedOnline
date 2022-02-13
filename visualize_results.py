@@ -45,7 +45,7 @@ app.layout = html.Div(children=[
     # Interactive range slider to allow user to choose a range of ranks between most viewed channels.
     dcc.RangeSlider(0, yt_data.shape[0],
                     id='channel_ranking_slider',
-                    marks={i: f"Rank#{i+1}" for i in range(0, yt_data.shape[0], 500)},
+                    marks={index_value: f"Rank#{index_value+1}" for index_value in range(0, yt_data.shape[0], 500)},
                     step=10,
                     value=[0, 30],
     ),
