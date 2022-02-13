@@ -98,7 +98,7 @@ def graph_output(input_range):
                       font=dict(
                           family='Courier New, monospace',
                           size=14,
-                          color='#7F7F7F'
+                          color='#151515'
                       )
     )
     return fig
@@ -114,16 +114,14 @@ def summary_table_output(input_range, top_list_number=5):
     x is 5 by default.
     """
     min_bound = input_range[0]
-    return html.H3(
+    return html.P(
         f'Top-{top_list_number} viewed channels in current selection range.',
-        style={'fontsize': 3,
+        style={'text-indent': 50,
         'font-family': 'arial'}), html.Thead(
         html.Tr([
         html.Th('Channel name'),
         html.Th('# of times viewed')
-        ]
-        )
-        ), html.Tbody([
+        ])), html.Tbody([
         html.Tr(
         [html.Td(yt_data['channel_name'][index_value]), 
         html.Td(yt_data['#_of_accessed_time'][index_value])])

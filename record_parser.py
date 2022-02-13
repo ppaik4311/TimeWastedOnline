@@ -63,3 +63,5 @@ yt_records_df = yt_records_df.sort_values(by='accessed_time', ascending=False)
 yt_records_df = yt_records_df[yt_records_df['accessed_time'] >= 2]
 yt_records_df = yt_records_df.rename(columns={'video_url':'#_of_unique_urls', 'video_title':'#_of_unique_video_titles', 'accessed_time':'#_of_accessed_time'})
 yt_records_df = yt_records_df.reset_index(drop=True)
+
+# Explore methods to sort out channel category information and more details.
