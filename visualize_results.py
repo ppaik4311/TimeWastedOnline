@@ -55,6 +55,23 @@ app.layout = html.Div(children=[
         id='channel_pareto',
         figure=fig
     ),
+    
+    # Render an interactive summary table based on range selection.
+    html.Div(children=[
+        html.Thead(
+            html.Tr([
+                html.Th('Channel name'),
+                html.Th('# of times viewed')
+                ]
+            )
+        ),
+        html.Tbody([
+            html.Tr(
+                [html.Td(yt_data['channel_name'][i]), html.Td(yt_data['#_of_accessed_time'][i])])
+            for i in range(0, len(yt_data['channel_name']))
+            ]
+        )],
+    ),
 ])
 
 # Callback for interactive slider selection range viewer.
