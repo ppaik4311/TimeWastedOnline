@@ -67,8 +67,9 @@ app.layout = html.Div(children=[
         ),
         html.Tbody([
             html.Tr(
-                [html.Td(yt_data['channel_name'][i]), html.Td(yt_data['#_of_accessed_time'][i])])
-            for i in range(0, len(yt_data['channel_name']))
+                [html.Td(yt_data['channel_name'][index_value]), 
+                 html.Td(yt_data['#_of_accessed_time'][index_value])])
+            for index_value in range(0, len(yt_data['channel_name']))
             ]
         )],
     ),
