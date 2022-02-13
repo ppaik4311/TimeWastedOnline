@@ -57,23 +57,8 @@ app.layout = html.Div(children=[
     ),
 
     # Render an interactive summary table based on range selection.
-    html.Div(children=[
-        #html.Thead(
-        #    html.Tr([
-        #        html.Th('Channel name'),
-        #        html.Th('# of times viewed')
-        #        ]
-        #    )
-        #),
-        #html.Tbody([
-        #    html.Tr(
-        #        [html.Td(yt_data['channel_name'][index_value]), 
-        #        html.Td(yt_data['#_of_accessed_time'][index_value])])
-        #    for index_value in range(min_bound, max_bound)
-        #    ]
-        #)],
-        ],
-        id='dynamic_summary_table'
+    html.Div(children=[],
+             id='dynamic_summary_table'
     ),
 ])
 
@@ -123,18 +108,26 @@ def graph_output(input_range):
     Output('dynamic_summary_table', 'children'),
     Input('channel_ranking_slider', 'value')
 )
-def summary_table_output(input_range):
-    return html.Thead(
+def summary_table_output(input_range, top_list_number=5):
+    """
+    Render a dynamic summary showing top x channel information.
+    x is 5 by default.
+    """
+    min_bound = input_range[0]
+    return html.H3(
+        f'Top-{top_list_number} viewed channels in current selection range.',
+        style={'fontsize': 3,
+        'font-family': 'arial'}), html.Thead(
         html.Tr([
-            html.Th('Channel name'),
-            html.Th('# of times viewed')
-            ]
+        html.Th('Channel name'),
+        html.Th('# of times viewed')
+        ]
         )
-    ), html.Tbody([
+        ), html.Tbody([
         html.Tr(
-            [html.Td(yt_data['channel_name'][index_value]), 
-            html.Td(yt_data['#_of_accessed_time'][index_value])])
-        for index_value in range(input_range[0], input_range[1])
+        [html.Td(yt_data['channel_name'][index_value]), 
+        html.Td(yt_data['#_of_accessed_time'][index_value])])
+        for index_value in range(min_bound, min_bound + top_list_number)
         ])
 
 if __name__ == '__main__':
