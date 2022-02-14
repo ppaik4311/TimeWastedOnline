@@ -4,6 +4,7 @@
 # 02/06/2022
 # Code for visualizing data on a dashboard format.
 
+from turtle import color
 from dash import dash, Dash, dcc, html, Input, Output
 import plotly.graph_objects as go
 from record_parser import yt_records_df as yt_data
@@ -47,13 +48,12 @@ app.layout = html.Div(children=[
                     id='channel_ranking_slider',
                     marks={index_value: {'label': f"Rank#{index_value+1}",
                                          'style': {
-                                             'font-size': 15,
+                                             'font-size': 12,
                                              'font-family': 'arial',
                                              'color': '#151515'
                                          }
-                            } for index_value in range(0, yt_data.shape[0], 500)
+                        } for index_value in range(0, yt_data.shape[0], 500)
                     },
-                    #marks={index_value: f"Rank#{index_value+1}" for index_value in range(0, yt_data.shape[0], 500)},
                     step=10,
                     value=[0, 30],
     ),
@@ -107,7 +107,7 @@ def graph_output(input_range):
                           family='Courier New, monospace',
                           size=14,
                           color='#151515'
-                      )
+                      ),
     )
     return fig
 
