@@ -48,7 +48,8 @@ app.layout = html.Div(children=[
                     marks={index_value: {'label': f"Rank#{index_value+1}",
                                          'style': {
                                              'font-size': 15,
-                                             'font-family': 'arial'
+                                             'font-family': 'arial',
+                                             'color': '#151515'
                                          }
                             } for index_value in range(0, yt_data.shape[0], 500)
                     },
